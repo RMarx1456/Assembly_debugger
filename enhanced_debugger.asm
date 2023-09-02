@@ -761,9 +761,10 @@ section .text
 	global _start
 	
 	_start:
+		;Incorrect arguments for SYS_SOCKET
 		MOV RAX, SYS_SOCKET
 		PUSH RAX
-		MOV RDI, 0 ;ipv4
+		MOV RDI, 0 
 		MOV RSI, 0
 		SYSCALL
 		
