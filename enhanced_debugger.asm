@@ -769,6 +769,8 @@ section .text
 		
 		CMP RAX, 0
 		JL Error_Handler
+		;"Pop" RAX value from stack if an error isn't made
+		ADD RSP, 16
 		
 		exit:
 		MOV RAX, SYS_WRITE
